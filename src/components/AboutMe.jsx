@@ -2,17 +2,17 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronRight, Code, Palette, Zap, Database } from "lucide-react"
+import { CodeBracketIcon, PaintBrushIcon, BoltIcon, ServerStackIcon } from "@heroicons/react/24/solid"
 import Particles from "./Particles"
 
 const AboutMe = () => {
   const [activeSkill, setActiveSkill] = useState(null)
 
   const skills = [
-    { name: "Frontend", icon: Code, color: "bg-blue-500", details: "React, Vue, Angular" },
-    { name: "Design", icon: Palette, color: "bg-purple-500", details: "Figma, Adobe XD, Sketch" },
-    { name: "Backend", icon: Database, color: "bg-green-500", details: "Node.js, Python, SQL" },
-    { name: "Performance", icon: Zap, color: "bg-yellow-500", details: "Optimization, Caching, SEO" },
+    { name: "Frontend", icon: CodeBracketIcon, color: "bg-blue-500", details: "React, Vue, Angular" },
+    { name: "Design", icon: PaintBrushIcon, color: "bg-purple-500", details: "Figma, Adobe XD, Sketch" },
+    { name: "Backend", icon: ServerStackIcon, color: "bg-green-500", details: "Node.js, Python, SQL" },
+    { name: "Performance", icon: BoltIcon, color: "bg-yellow-500", details: "Optimization, Caching, SEO" },
   ]
 
   return (
@@ -72,7 +72,7 @@ const AboutMe = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl font-bold mb-6 font-['Founders_Grotesk_X-Condensed']"
+              className="text-5xl font-bold mb-6"
             >
               Vrishank Kirpane
             </motion.h2>
@@ -80,7 +80,7 @@ const AboutMe = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-gray-300 leading-relaxed text-2xl mb-8 font-['Neue_Montreal']"
+              className="text-gray-300 leading-relaxed text-2xl mb-8"
             >
               I'm a multifaceted developer and designer, blending creativity with technical expertise. My passion lies
               in crafting digital experiences that are not just functional, but delightful. Hover over the skill bubbles
@@ -97,8 +97,8 @@ const AboutMe = () => {
                   transition={{ duration: 0.5 }}
                   className="mb-8 p-4 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm"
                 >
-                  <h3 className="text-2xl font-bold mb-2 font-['Founders_Grotesk_X-Condensed']">{activeSkill}</h3>
-                  <p className="text-gray-300 font-['Neue_Montreal']">
+                  <h3 className="text-2xl font-bold mb-2">{activeSkill}</h3>
+                  <p className="text-gray-300">
                     {skills.find((s) => s.name === activeSkill)?.details}
                   </p>
                 </motion.div>
