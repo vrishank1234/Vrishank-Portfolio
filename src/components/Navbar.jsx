@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
 
 // FlipLink Component with Wavy Flip Effect
 const FlipLink = ({ children, href }) => {
@@ -34,11 +33,11 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-10 w-full font-['Founders_Grotesk_X-Condensed']   text-white px-12 py-4 z-50 flex justify-between items-center">
+    <nav className="fixed top-10 w-full font-['Founders_Grotesk_X-Condensed'] text-white px-12 py-4 z-50 flex justify-between items-center">
       {/* Logo */}
       <div className="text-3xl flex items-center gap-2 font-['Founders_Grotesk_X-Condensed'] font-bold">
-  <span>Portfolio</span>
-</div>
+        <span>Portfolio</span>
+      </div>
 
       {/* Desktop Links */}
       <div className="hidden md:flex gap-10">
@@ -49,10 +48,10 @@ function Navbar() {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden text-white"
+        className="md:hidden text-white text-2xl"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        {menuOpen ? "✖" : "☰"}
       </button>
 
       {/* Mobile Menu */}
