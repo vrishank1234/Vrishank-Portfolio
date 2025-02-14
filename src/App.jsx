@@ -10,6 +10,7 @@ import { HoverImageLinks } from './components/Feature'
 import LocomotiveScroll from 'locomotive-scroll';
 import { useEffect, useState } from 'react'
 import Preloader from './components/Preloader'
+import AboutMe from './components/AboutMe'
 
 
 function App() {
@@ -32,12 +33,13 @@ const [loading, setLoading] = useState(true);
           <Navbar />
           <LandingPage />
           <Marquee />
-          <About />
+          <AboutMe />
           <Funk />
           {/* <Feature /> */}
           {/* <RevealLinks /> */}
+          <About />
           <HoverImageLinks />
-
+          
         </>
       )}
     </div>

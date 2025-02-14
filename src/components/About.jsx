@@ -20,9 +20,9 @@ export const BouncyCardsFeatures = () => {
           </div>
         </BounceCard>
         <BounceCard className="col-span-12 md:col-span-8">
-          <CardTitle>Mental Health UI</CardTitle>
+          <CardTitle>Loconomics</CardTitle>
           <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-green-400 to-violet-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
-          <img src="src/assets/MacBook Pro 14_ - 1.png" alt="Feature demo" className="mx-auto mb-2 w-full h-full object-contain " />
+          <img src="src/assets/image copy 3.png" alt="Feature demo" className="mx-auto mb-2 w-full h-full object-contain " />
             <span className="block text-center font-semibold text-orange-50">
               FEATURE DEMO HERE
             </span>
@@ -40,9 +40,9 @@ export const BouncyCardsFeatures = () => {
           </div>
         </BounceCard>
         <BounceCard className="col-span-12 md:col-span-4">
-          <CardTitle>Healthians</CardTitle>
+          <CardTitle>Crypto Trading</CardTitle>
           <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-green-400 to-zinc-800 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
-          <img src="src/assets/image copy 2.png" alt="Feature demo" className="mx-auto mb-2 w-full h-full object-contain " />
+          <img src="src/assets/image copy 4.png" alt="Feature demo" className="mx-auto mb-2 w-full h-full object-contain " />
             <span className="block text-center font-semibold text-red-50">
               FEATURE DEMO HERE
             </span>
