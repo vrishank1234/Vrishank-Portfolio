@@ -25,7 +25,7 @@ const AboutMe = () => {
           >
             <div className="w-80 h-80 mx-auto lg:mx-0 rounded-full overflow-hidden border-4 border-white shadow-2xl backdrop-blur-lg">
               <img
-                src="src/assets/image copy 7.png?height=320&width=320"
+                src="src/assets/image copy 6.png?height=320&width=320"
                 alt="Vrishank Kirpane"
                 className="w-full h-full object-cover"
               />
