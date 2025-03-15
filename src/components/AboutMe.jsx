@@ -1,42 +1,22 @@
-"use client"
-
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { CodeBracketIcon, PaintBrushIcon, BoltIcon, ServerStackIcon } from "@heroicons/react/24/solid"
+import { Code, Brush, Database, Zap } from "lucide-react"
 import Particles from "./Particles"
 
 const AboutMe = () => {
   const [activeSkill, setActiveSkill] = useState(null)
 
   const skills = [
-    { name: "Frontend", icon: CodeBracketIcon, color: "bg-blue-500", details: "React, Vue, Angular" },
-    { name: "Design", icon: PaintBrushIcon, color: "bg-purple-500", details: "Figma, Adobe XD, Sketch" },
-    { name: "Backend", icon: ServerStackIcon, color: "bg-green-500", details: "Node.js, Python, SQL" },
-    { name: "Performance", icon: BoltIcon, color: "bg-yellow-500", details: "Optimization, Caching, SEO" },
+    { name: "Frontend", icon: <Code size={24} />, color: "bg-blue-500", details: "React, Vue, Angular" },
+    { name: "Design", icon: <Brush size={24} />, color: "bg-purple-500", details: "Figma, Adobe XD, Sketch" },
+    { name: "Backend", icon: <Database size={24} />, color: "bg-green-500", details: "Node.js, Python, SQL" },
+    { name: "Performance", icon: <Zap size={24} />, color: "bg-yellow-500", details: "Optimization, Caching, SEO" },
   ]
 
   return (
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
-      {/* Particles Background */}
-      <div className="absolute inset-0 -z-100">
-        <Particles
-          particleCount={300}
-          particleSpread={5}
-          speed={0.2}
-          particleColors={["#4f46e5", "#a855f7", "#22d3ee"]}
-          moveParticlesOnHover={false}
-          particleHoverFactor={2}
-          alphaParticles={true}
-          particleBaseSize={120}
-          sizeRandomness={1.2}
-          cameraDistance={30}
-          disableRotation={false}
-        />
-      </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Interactive Profile Section */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -45,7 +25,7 @@ const AboutMe = () => {
           >
             <div className="w-80 h-80 mx-auto lg:mx-0 rounded-full overflow-hidden border-4 border-white shadow-2xl backdrop-blur-lg">
               <img
-                src="src/assets/portfolio_Image.jpeg?height=320&width=320"
+                src="src/assets/image copy 7.png?height=320&width=320"
                 alt="Vrishank Kirpane"
                 className="w-full h-full object-cover"
               />
@@ -53,20 +33,21 @@ const AboutMe = () => {
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                className={`absolute ${skill.color} rounded-full p-4 cursor-pointer shadow-lg`}
+                className={`absolute ${skill.color} rounded-full p-4 cursor-pointer shadow-lg flex items-center justify-center`}
                 style={{
                   top: `${39 + 50 * Math.sin((index * Math.PI) / 2)}%`,
                   left: `${25 + 50 * Math.cos((index * Math.PI) / 2)}%`,
                 }}
                 whileHover={{ scale: 1.1 }}
+                animate={{ y: [0, -10, 0] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                 onClick={() => setActiveSkill(skill.name)}
               >
-                <skill.icon className="w-8 h-8 text-white" />
+                {skill.icon}
               </motion.div>
             ))}
           </motion.div>
 
-          {/* About Me Content */}
           <div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}

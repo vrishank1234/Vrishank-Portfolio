@@ -32,8 +32,9 @@ const [loading, setLoading] = useState(true);
         <>
           <Navbar />
           <LandingPage />
-          <Marquee />
           <AboutMe />
+          <Marquee />
+          
           <Funk />
           {/* <Feature /> */}
           {/* <RevealLinks /> */}
